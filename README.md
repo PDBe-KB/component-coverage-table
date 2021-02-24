@@ -1,27 +1,79 @@
-# PdbeKbCoverageTable
+PDBe-KB Ping Component
+=
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6.
+[![Build Status](https://www.travis-ci.com/PDBe-KB/pdbe-kb-coverage-table.svg?branch=master)](https://www.travis-ci.com/PDBe-KB/pdbe-kb-ping-component)
+[![codecov](https://codecov.io/gh/PDBe-KB/pdbe-kb-coverage-table/branch/master/graph/badge.svg?token=GLYUFFF6QX)](https://codecov.io/gh/PDBe-KB/pdbe-kb-ping-component)
+[![Maintainability](https://api.codeclimate.com/v1/badges/cf98b84b88b21a3e6fb5/maintainability)](https://codeclimate.com/github/PDBe-KB/pdbe-kb-coverage-table/maintainability)
 
-## Development server
+This is the repository of a lightweight Angular 7+ web component that displays all the available PDB entries for a particular UniProt accession in a tabular format. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+This component is used on the PDBe-KB Aggregated Views of Proteins to display information on devices that are to small to use the standard sequence feature viewer, ProtVista.
 
-## Code scaffolding
+## Quick Start
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Get the code and install dependencies
+```
+git clone https://github.com/PDBe-KB/pdbe-kb-coverage-table.git
+cd pdbe-kb-coverage-table
+npm i
+```
 
-## Build
+Running the app
+```
+ng serve
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Running tests
+```
+ng test
+```
 
-## Running unit tests
+## Basic usage
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+The pinging component can be added to any Angular7+ apps.
 
-## Running end-to-end tests
+Import the component (e.g. in app.module.ts):
+```
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+import { AppComponent } from './app.component';
+import { CoverageTableComponent } from './coverage-table/coverage-table.component';
 
-## Further help
+@NgModule({
+  declarations: [
+    AppComponent,
+    CoverageTableComponent
+  ],
+  imports: [
+    BrowserModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Adding the pinging component to a template:
+```angular2html
+<app-coverage-table [data]="data"></app-coverage-table>
+```
+
+## Versioning
+
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/PDBe-KB/pdbe-kb-ping-component/tags).
+
+## Authors
+
+* **Nurul Nadzirin** - *Initial work* - [nurulnad](https://github.com/nurulnad)
+* **Mihaly Varadi** - *Migrating to GitHub* - [mvaradi](https://github.com/mvaradi)
+
+See also the list of [contributors](https://github.com/PDBe-KB/pdbe-kb-ping-component/contributors) who participated in this project.
+
+## License
+
+This project is licensed under the EMBL-EBI License - see the [LICENSE](LICENSE) file for details
+
+## Acknowledgements
+
+We would like to thank the [PDBe team](https://www.pdbe.org) and the [PDBe-KB partner resources](https://github.com/PDBe-KB/pdbe-kb-manual/wiki/PDBe-KB-Annotations) for their feedback and contributions.
