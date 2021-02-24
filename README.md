@@ -1,8 +1,8 @@
 PDBe-KB Coverage Table Component
 =
 
-[![Build Status](https://www.travis-ci.com/PDBe-KB/pdbe-kb-coverage-table.svg?branch=master)](https://www.travis-ci.com/PDBe-KB/pdbe-kb-ping-component)
-[![codecov](https://codecov.io/gh/PDBe-KB/pdbe-kb-coverage-table/branch/master/graph/badge.svg?token=GLYUFFF6QX)](https://codecov.io/gh/PDBe-KB/pdbe-kb-ping-component)
+[![Build Status](https://www.travis-ci.com/PDBe-KB/pdbe-kb-ping-component.svg?branch=master)](https://www.travis-ci.com/PDBe-KB/pdbe-kb-ping-component)
+[![codecov](https://codecov.io/gh/PDBe-KB/pdbe-kb-coverage-table/branch/main/graph/badge.svg?token=QA6OCNOB1E)](https://codecov.io/gh/PDBe-KB/pdbe-kb-coverage-table)
 [![Maintainability](https://api.codeclimate.com/v1/badges/4de133cf4cdd7ce170eb/maintainability)](https://codeclimate.com/github/PDBe-KB/pdbe-kb-coverage-table/maintainability)
 
 This is the repository of a lightweight Angular 7+ web component that displays all the available PDB entries for a particular UniProt accession in a tabular format. 
