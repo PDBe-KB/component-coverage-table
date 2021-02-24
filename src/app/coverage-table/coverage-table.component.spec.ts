@@ -39,6 +39,7 @@ const TEST_DATA: any = {
 describe('CoverageTableComponent', () => {
   let component: CoverageTableComponent;
   let fixture: ComponentFixture<CoverageTableComponent>;
+  let dataFragment: any;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -51,6 +52,7 @@ describe('CoverageTableComponent', () => {
     fixture = TestBed.createComponent(CoverageTableComponent);
     component = fixture.componentInstance;
     component.data = TEST_DATA;
+    dataFragment = component.data['tracks'][0]['data'][0]['label'][0]['icons'][0];
     fixture.detectChanges();
   });
 
@@ -69,14 +71,21 @@ describe('CoverageTableComponent', () => {
   });
 
   it('getClass() should work', () => {
-    expect(component.getClass(component.data['tracks'][0]['data'][0]['label'][0]['icons'][0])).toBeTruthy();
+    expect(component.getClass(dataFragment)).toEqual('icon icon-generic');
   });
 
   it('getSymbol() should work', () => {
-    expect(component.getSymbol(component.data['tracks'][0]['data'][0]['label'][0]['icons'][0])).toBeTruthy();
+    expect(component.getSymbol(dataFragment)).toEqual(';');
   });
 
   it('getStyle() should work', () => {
-    expect(component.getStyle(component.data['tracks'][0]['data'][0]['label'][0]['icons'][0])).toBeTruthy();
+    const expected = {
+      'background-color': 'background',
+      'color': '#fff',
+      'padding': '2px',
+      'margin': '0px 2px 0px 2px',
+      'font-size': '150%',
+    }
+    expect(component.getStyle(dataFragment)).toEqual(expected);
   });
 });
