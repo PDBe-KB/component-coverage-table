@@ -1,4 +1,4 @@
-PDBe-KB Ping Component
+PDBe-KB Coverage Table Component
 =
 
 [![Build Status](https://www.travis-ci.com/PDBe-KB/pdbe-kb-coverage-table.svg?branch=master)](https://www.travis-ci.com/PDBe-KB/pdbe-kb-ping-component)
