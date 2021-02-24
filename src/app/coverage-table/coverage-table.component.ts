@@ -1,4 +1,5 @@
 import {Component, Input} from '@angular/core';
+import {UniPDBData} from './coverage-table.models';
 
 @Component({
   selector: 'app-coverage-table',
@@ -7,7 +8,7 @@ import {Component, Input} from '@angular/core';
 })
 export class CoverageTableComponent {
 
-  @Input() data: any;
+  @Input() data: UniPDBData;
   iconClassMapping: object;
   iconSymbolMapping: object;
   viewLimit: number;
