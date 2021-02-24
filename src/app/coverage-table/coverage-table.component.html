@@ -1,0 +1,35 @@
+<table>
+  <tr class="row">
+    <th class="small-7 columns">PDB ID</th>
+    <th class="small-5 columns">UniProt Range</th>
+  </tr>
+  <tr *ngFor="let segment of data['tracks'][0]['data']; let i = index" class="row">
+    <td class="small-7 columns" *ngIf="i < viewLimit">
+      <span class="small-3 columns">
+        <a href="https://www.ebi.ac.uk/pdbe/entry/pdb/{{segment['accession']}}" target="_blank">
+          <strong>{{segment['accession']}}</strong>
+        </a>
+        {{segment['label']['resolution']}}Å
+      </span>
+      <span class="small-9 columns">
+        <span *ngFor="let icon of segment['label']['icons']">
+          <a href="{{icon['url']}}" target="_blank" class="icon-links" style="border-bottom-style: none;">
+            <i [class]="getClass(icon)" [attr.data-icon]="getSymbol(icon)" [ngStyle]="getStyle(icon)"></i>
+          </a>
+        </span>
+      </span>
+    </td>
+    <td class="small-5 columns" style="text-align: center" *ngIf="i < viewLimit">
+      {{segment['locations'][0]['fragments'][0]['start']}} -
+      {{segment['locations'][0]['fragments'][segment['locations'][0]['fragments'].length-1]['end']}}
+    </td>
+  </tr>
+</table>
+<span class="button list-button" (click)="showAll()" *ngIf="viewLimit < data['tracks'][0]['data'].length">
+  <i class="icon icon-functional" data-icon="+"></i>
+  Show all items ({{data['tracks'][0]['data'].length}})
+</span>
+<span class="button list-button" (click)="showLess()" *ngIf="viewLimit > defaultViewLimit">
+  <i class="icon icon-functional" data-icon="-"></i>
+  Show less items
+</span>

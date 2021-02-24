@@ -2,10 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { CoverageTableComponent } from './coverage-table/coverage-table.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CoverageTableComponent
   ],
   imports: [
     BrowserModule
