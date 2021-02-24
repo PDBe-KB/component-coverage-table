@@ -9,6 +9,10 @@ This is the repository of a lightweight Angular 7+ web component that displays a
 
 This component is used on the PDBe-KB Aggregated Views of Proteins to display information on devices that are to small to use the standard sequence feature viewer, ProtVista.
 
+### Example:
+
+<img src="https://raw.githubusercontent.com/PDBe-KB/pdbe-kb-coverage-table/main/pdbe-kb-coverage-table.jpg">
+
 ## Quick Start
 
 Get the code and install dependencies
