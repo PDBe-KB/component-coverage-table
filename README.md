@@ -65,14 +65,14 @@ Adding the pinging component to a template:
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/PDBe-KB/pdbe-kb-ping-component/tags).
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/PDBe-KB/component-coverage-table/tags).
 
 ## Authors
 
 * **Nurul Nadzirin** - *Initial work* - [nurulnad](https://github.com/nurulnad)
 * **Mihaly Varadi** - *Migrating to GitHub* - [mvaradi](https://github.com/mvaradi)
 
-See also the list of [contributors](https://github.com/PDBe-KB/pdbe-kb-ping-component/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/PDBe-KB/component-coverage-table/contributors) who participated in this project.
 
 ## License
 
