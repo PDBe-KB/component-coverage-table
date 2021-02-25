@@ -2,8 +2,8 @@ PDBe-KB Coverage Table Component
 =
 
 [![Build Status](https://www.travis-ci.com/PDBe-KB/pdbe-kb-ping-component.svg?branch=master)](https://www.travis-ci.com/PDBe-KB/pdbe-kb-ping-component)
-[![codecov](https://codecov.io/gh/PDBe-KB/pdbe-kb-coverage-table/branch/main/graph/badge.svg?token=QA6OCNOB1E)](https://codecov.io/gh/PDBe-KB/pdbe-kb-coverage-table)
-[![Maintainability](https://api.codeclimate.com/v1/badges/4de133cf4cdd7ce170eb/maintainability)](https://codeclimate.com/github/PDBe-KB/pdbe-kb-coverage-table/maintainability)
+[![codecov](https://codecov.io/gh/PDBe-KB/component-coverage-table/branch/main/graph/badge.svg?token=QA6OCNOB1E)](https://codecov.io/gh/PDBe-KB/component-coverage-table)
+[![Maintainability](https://api.codeclimate.com/v1/badges/4de133cf4cdd7ce170eb/maintainability)](https://codeclimate.com/github/PDBe-KB/component-coverage-table/maintainability)
 
 This is the repository of a lightweight Angular 7+ web component that displays all the available PDB entries for a particular UniProt accession in a tabular format. 
 
@@ -11,14 +11,14 @@ This component is used on the PDBe-KB Aggregated Views of Proteins to display in
 
 ### Example:
 
-<img src="https://raw.githubusercontent.com/PDBe-KB/pdbe-kb-coverage-table/main/pdbe-kb-coverage-table.jpg">
+<img src="https://raw.githubusercontent.com/PDBe-KB/component-coverage-table/main/component-coverage-table.jpg">
 
 ## Quick Start
 
 Get the code and install dependencies
 ```
-git clone https://github.com/PDBe-KB/pdbe-kb-coverage-table.git
-cd pdbe-kb-coverage-table
+git clone https://github.com/PDBe-KB/component-coverage-table.git
+cd component-coverage-table
 npm i
 ```
 
