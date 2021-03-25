@@ -78,8 +78,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Nurul Nadzirin** - *Initial work* - [nurulnad](https://github.com/nurulnad)
-* **Mihaly Varadi** - *Migrating to GitHub* - [mvaradi](https://github.com/mvaradi)
+* **Mihaly Varadi** - *Initial implementation* - [mvaradi](https://github.com/mvaradi)
 
 See also the list of [contributors](https://github.com/PDBe-KB/component-coverage-table/contributors) who participated in this project.
 
