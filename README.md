@@ -1,7 +1,7 @@
 PDBe-KB Coverage Table Component
 =
 
-[![Build Status](https://www.travis-ci.com/PDBe-KB/pdbe-kb-ping-component.svg?branch=master)](https://www.travis-ci.com/PDBe-KB/pdbe-kb-ping-component)
+[![Build Status](https://www.travis-ci.com/PDBe-KB/component-ping-resources.svg?branch=master)](https://www.travis-ci.com/PDBe-KB/component-ping-resources)
 [![codecov](https://codecov.io/gh/PDBe-KB/component-coverage-table/branch/main/graph/badge.svg?token=QA6OCNOB1E)](https://codecov.io/gh/PDBe-KB/component-coverage-table)
 [![Maintainability](https://api.codeclimate.com/v1/badges/4de133cf4cdd7ce170eb/maintainability)](https://codeclimate.com/github/PDBe-KB/component-coverage-table/maintainability)
 
