@@ -5,13 +5,13 @@ PDBe-KB Coverage Table Component
 [![codecov](https://codecov.io/gh/PDBe-KB/component-coverage-table/branch/main/graph/badge.svg?token=QA6OCNOB1E)](https://codecov.io/gh/PDBe-KB/component-coverage-table)
 [![Maintainability](https://api.codeclimate.com/v1/badges/4de133cf4cdd7ce170eb/maintainability)](https://codeclimate.com/github/PDBe-KB/component-coverage-table/maintainability)
 
-This is the repository of a lightweight Angular 7+ web component that displays all the available PDB entries for a particular UniProt accession in a tabular format. 
+This repository is for the codebase of a lightweight Angular v7 web component that displays all the available PDB entries for a particular UniProt accession in a tabular format. 
 
 This component is used on the PDBe-KB Aggregated Views of Proteins to display information on devices that are to small to use the standard sequence feature viewer, ProtVista.
 
 ### Example:
 
-<img src="https://raw.githubusercontent.com/PDBe-KB/component-coverage-table/main/component-coverage-table.jpg">
+<img src="https://raw.githubusercontent.com/PDBe-KB/component-coverage-table/main/pdbe-kb-coverage-table.jpg">
 
 ## Quick Start
 
@@ -34,7 +34,7 @@ ng test
 
 ## Dependencies
 
-The main template should also have the following CSS import:
+The main template (i.e. `index.html` by default) should also have the following CSS imports:
 ```angular2html
 <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-global.css" type="text/css" media="all"/>
 <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css" type="text/css" media="all"/>
@@ -43,9 +43,11 @@ The main template should also have the following CSS import:
 
 ## Basic usage
 
-The pinging component can be added to any Angular7+ apps.
+The component can be added to any Angular v7 apps.
 
-Import the component (e.g. in app.module.ts):
+#### 1.) Import the component:
+
+Import the component in `app.module.ts` by default.
 ```
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -67,9 +69,77 @@ import { CoverageTableComponent } from './coverage-table/coverage-table.componen
 export class AppModule { }
 ```
 
-Adding the pinging component to a template:
+#### 2.) Add the component to a template:
 ```angular2html
 <app-coverage-table [data]="data"></app-coverage-table>
+```
+
+The data model for the input data is described in 
+`src/app/coverage-table/coverage-table.models.ts`
+
+##### Example input data
+
+```angular2html
+{
+  'largeLabels': true,
+  'sequence': 'MEDTQAIDWDVEEEEETEQSSESLRCNVEPVGRLHIFS',
+  'length': 28,
+  'tracks': [
+    {
+      'labelType': 'text',
+      'label': 'PDB Structures (1)',
+      'data': [
+        {
+          'accession': '2etx',
+          'labelType': 'pdbIcons',
+          'label': {
+            'id': '2etx',
+            'url': 'https://pdbe.org/2etx',
+            'resolution': 1.33,
+            'icons': [
+              {
+                'type': 'experiments',
+                'background': 'rgb(116,179,96)',
+                'tooltipContent': 'This entry has X-ray diffraction data',
+                'url': 'http://www.ebi.ac.uk/pdbe/entry/pdb/2etx/experiment'
+              }
+            ]
+          },
+          'color': '#4169e1',
+          'locations': [
+            {
+              'fragments': [
+                {
+                  'start': 1884,
+                  'end': 1890,
+                  'start_code': 'THR',
+                  'end_code': 'SER',
+                  'tooltipContent': 'Type: PDB mapped to UniProt<br>Range: THR1884-SER1890<br>PDB entry: ' +
+                    '<a target="_blank" href="http://www.ebi.ac.uk/pdbe/entry/pdb/2etx/protein/1">2etx Best Chain B</a>',
+                  'color': 'rgb(211, 211, 211)'
+                }
+              ]
+            }
+          ],
+          'type': 'UniProt range',
+          'labelTooltip': 'Crystal Structure of MDC1 Tandem BRCT Domains',
+          'observed_residue_count': 195
+        }
+      ]
+    }
+  ],
+  'legends': {
+    'alignment': 'right',
+    'data': {
+      'Other': [
+        {
+          'color': 'rgb(65, 105, 225)',
+          'text': 'Observed'
+        }
+      ]
+    }
+  }
+};
 ```
 
 ## Versioning
@@ -78,8 +148,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Nurul Nadzirin** - *Initial work* - [nurulnad](https://github.com/nurulnad)
-* **Mihaly Varadi** - *Migrating to GitHub* - [mvaradi](https://github.com/mvaradi)
+* **Mihaly Varadi** - *Initial Implementation* - [mvaradi](https://github.com/mvaradi)
 
 See also the list of [contributors](https://github.com/PDBe-KB/component-coverage-table/contributors) who participated in this project.
 
